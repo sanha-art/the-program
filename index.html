@@ -9,49 +9,30 @@
 </head>
 <body>
     <header>
+        <img src="assets/background.jpg" alt="Poster" class="poster">
         <h1>우리가 어디까지 깊어질 수 있을까?</h1>
-        <img src="images/poster.jpeg" alt="공연 포스터" class="main-poster">
     </header>
 
-    <section class="intro">
-        <h2 onclick="toggleText(this)">창작집단 새알 소개</h2>
-        <p hidden>
-        창작집단 새알은 ‘삶을 감각하는 시간’을 주제로 다양한 형식의 공연과 창작을 이어오고 있습니다. 우리 삶의 다양한 층위를 다루되, 그 깊이를 존중하며 나아가고자 합니다.
-        </p>
+    <section class="content">
+        <h2 onclick="openModal('modal1')">창작집단 새알 소개</h2>
+        <div id="modal1" class="modal">
+            <div class="modal-content">
+                <span class="close" onclick="closeModal('modal1')">&times;</span>
+                <p>‘창작집단 새알’은 다양한 예술형식을 탐색하며 이야기의 새로운 형태를 실험하는 창작집단입니다...</p>
+            </div>
+        </div>
+
+        <h2 onclick="openModal('modal2')">이산하 배우의 작품 소개</h2>
+        <div id="modal2" class="modal">
+            <div class="modal-content">
+                <span class="close" onclick="closeModal('modal2')">&times;</span>
+                <p>“물속에 들어갔다. 그리고 떠오르지 않았다. 어떤 시간에도 닿지 않겠다는 듯...</p>
+            </div>
+        </div>
+
+        <!-- 추가 항목을 필요시 여기에 계속 삽입 가능 -->
     </section>
 
-    <section class="intro">
-        <h2 onclick="toggleText(this)">기획 의도</h2>
-        <p hidden>
-        ‘1인극’이라는 형식을 선택한 이유는 우리가 각자의 시간과 서사 속에 고립되었다는 감각에서 출발했습니다. 하지만 고립은 단절과는 다르다고 믿습니다. 각자의 외로움을 인정하면서도, 그것이 만남을 위한 조건이 될 수 있다고 생각합니다. 이번 프로젝트에서는 ‘혼자인 이야기’ 속에 스민 연결의 흔적을 찾아보려 합니다.
-        </p>
-    </section>
-
-    <section class="intro">
-        <h2 onclick="toggleText(this)">작품 소개</h2>
-        <p hidden>
-        『우리가 어디까지 깊어질 수 있을까?』는 4개의 1인극으로 구성된 공연입니다. 각 배우가 저마다의 고유한 방식으로 자기 안의 깊은 심연을 탐색하고, 그곳에서 건져올린 감각과 질문을 관객 앞에 펼쳐 보입니다.
-        </p>
-    </section>
-
-    <section class="intro">
-        <h2 onclick="toggleText(this)">이산하 배우의 작품 소개</h2>
-        <p hidden>
-        언젠가부터 나는 나를 믿지 못하게 되었다. 삶에서 일어나는 일을 기쁘게 받아들이기보다 늘 한 발짝 물러나서 "이게 진짜야? 이게 진짜라고?" 되묻는 사람이 되어버렸다. 몸은 한없이 예민해지고, 마음은 경직되었다. 사람들과 어울리는 것이, 새로운 것을 시도하는 것이, 어딘가를 향해 나아가는 것이 점점 더 어려워졌다. 때때로 모든 것이 너무 가깝게 느껴졌고, 그래서 모든 것이 무서웠다.
-
-        이 독백은, 그럼에도 불구하고 나의 세계를 조금 더 신뢰하고 싶은 몸부림이다. 기꺼이 우스꽝스러워지고, 조심스럽게 손 내밀어보고, 주저하면서도 한 걸음 내딛어보는 이야기다.
-        </p>
-    </section>
-
-    <footer>
-        <p>© 창작집단 새알</p>
-    </footer>
-
-    <script>
-    function toggleText(element) {
-        const p = element.nextElementSibling;
-        p.hidden = !p.hidden;
-    }
-    </script>
+    <script src="script.js"></script>
 </body>
 </html>
